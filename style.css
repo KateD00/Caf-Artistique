@@ -1,0 +1,320 @@
+
+*{
+    box-sizing:border-box;
+}
+body{
+    background-color: #d8bea8;
+    padding: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* header */
+.header{
+    background-image: url("zrnka1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    padding: 30px;  /*vnitřní odsazení*/
+    color: white;
+    font-weight: bold;
+}
+.header h1{
+    font-size: 45px;
+}
+
+/* nav */
+.nav{
+    background-color: #a47e5e;
+    overflow: hidden; /*objevi se pozadí kvuli float left*/
+    font-weight: bold;   
+}
+.nav a{
+    display: block; /*muzu nastavovat padding*/
+    float: left; /*vedle sebe v levo, pryč pozadí*/
+    color: white;
+    text-decoration: none; /*byebye potrženi*/
+    padding: 15px 18px;
+
+}
+.nav a:hover{ /*po najetí myší*/
+    background-color: rgba(62, 62, 62, 0.662);
+    color: white;
+
+}
+/* main */
+.main::after { /*když se header+footer spojí*/
+    display: table;
+    content: "";
+    clear: both;
+}
+.card{
+    background-color: rgba(0, 0, 0, 0.67);
+    color: white;
+    width: 100%;
+    padding: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.card1{
+    background-image: url("Novinky.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card2{
+    background-image: url("AKADEMIE\ \(2\).jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card3{
+    background-image: url("členství.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card4{
+    background-image: url("gallery.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.left{
+    float: left;
+    width: 80%;
+    text-align: justify; /*zarovnání do bloku*/
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}   
+.right{
+    float: left;
+    width: 20%;
+    padding-left: 15px;
+    text-align: justify;   
+}
+.right a{
+        text-decoration: none;    
+}
+.right h3{
+    text-align: center;
+}
+
+/* footer */
+.footer{
+    background-color: #a47e5e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+/* obrázky */
+.obr1 {
+    float: right;
+    padding-left: 20px;
+}
+.obrhl {
+    float: left;
+}
+.obrhl2 {
+    float: right;
+}
+.obr2{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.obr{
+       display: flex; 
+       align-items : center; 
+       float: left;
+       padding-right: 10px;
+}
+.vlajka{
+    width: 100px; 
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute; 
+    right: 35px; 
+    width: 30px;
+    top: 190px;
+}
+
+/* tabulka*/
+.tabulka{
+    /* Použít CSS Flexbox */ 
+    display: flex; 
+
+    /* Střed položek vodorovně */ 
+    justify-content: center; 
+
+    /* Střed položek svisle */ 
+    align-items : center; 
+}
+.nadpish2 h2{
+    text-align: center;
+}
+.icons {
+    display: flex;
+    justify-content: center;  
+    align-items : center
+
+}
+
+.icon {
+    cursor: pointer;
+}
+.arrow{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* tabulka kava*/
+.tabulka-kava{
+    display: flex;
+    justify-content: center; /* Horizontální centrování */
+    align-items: center; /* Vertikální centrování */
+    border: none;
+}
+.tabulka-kava th {
+    background-color: #74573f; /* Světle šedé pozadí pro hlavičku */
+    font-weight: bold; /* Tučné písmo */
+}
+.tabulka-kava th, td {
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    border: none;
+}
+.tabulka-kava tr:nth-child(odd) {
+    background-color: #d3b7a0; /* Světle šedé pozadí */
+}
+
+.tabulka-kava tr:nth-child(even) {
+    background-color: #d3b7a0; /* Tmavší šedé pozadí */
+}
+
+.tabulka-kava tr:hover {
+    background-color: #8e725b; 
+    color: white;
+}
+/* Galerie tabulka */
+.tb-galerie{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-container td {
+    padding: 10px;
+}
+
+.obr-container {
+    position: relative;
+}
+
+.obr-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.obr-container:hover .text-overlay {
+    display: flex;}
+.offer {
+  background-color: #3e352f; /* tmavě hnědé pozadí */
+  color: #f3e5d0; /* světlý text */
+  padding: 40px 20px;
+}
+
+.offer h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.offer-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.offer-item {
+  background-color: rgba(255, 255, 255, 0.05); /* lehce odlišné bloky */
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #6c5c4f;
+  transition: background-color 0.3s ease;
+}
+
+.offer-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.offer-item h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #fff;
+}
+
+.offer-item p {
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+.contact {
+  background-color: #3e352f;
+  color: #f3e5d0;
+  padding: 40px 20px;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #6c5c4f;
+  transition: background-color 0.3s ease;
+}
+
+.contact-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contact-item h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #fff;
+}
+
+.contact-item p {
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
